@@ -17,21 +17,99 @@
     a    {text-decoration: none; color: #0366d6;}
     a:hover {text-decoration: underline;}
     .meta{font-size: .85rem; color: #555; margin-left: .25rem;}
-    .card { border: 1px solid #ccc; border-radius: 4px; padding: 1rem; margin-bottom: 1rem; }
-    .buttons { margin-top: .5rem; }
-    .buttons a { display: inline-block; margin-right: .5rem; padding: .25rem .5rem; background-color: #0366d6; color: white; border-radius: 4px; text-decoration: none; font-size: .85rem; }
+    .card { 
+      border: 1px solid #ccc; 
+      border-radius: 4px; 
+      padding: 1rem; 
+      margin-bottom: 1rem; 
+      display: flex; 
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .buttons { 
+      margin-top: .5rem;
+      display: flex;
+      gap: .5rem;
+    }
+    .buttons a { 
+      display: inline-block; 
+      padding: .25rem .5rem; 
+      background-color: #0366d6; 
+      color: white; 
+      border-radius: 4px; 
+      text-decoration: none; 
+      font-size: .85rem; 
+    }
     .buttons a:hover { background-color: #024e9a; }
-    .controls { display: flex; gap: .5rem; align-items: center; margin-bottom: 1rem; }
-    .card { display: flex; align-items: center; justify-content: space-between; padding: .5rem 1rem; margin-bottom: .5rem; border-left: 4px solid #0366d6; }
-    .info { display: flex; gap: 1rem; flex: 1; }
-    .info span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .info .title { font-weight: bold; color: #0366d6; font-size: 1.0em; }
-    .info .desc { color: #555; font-size: 0.9em; }
-    .info .artist { color: #333; font-style: italic; }
-    .info .duration { color: #888; font-family: monospace; }
-    .card .info { flex: 1; min-width: 0; }
-    .card .buttons { flex-shrink: 0; }
-    .buttons img { width: 16px; height: 16px; vertical-align: middle; margin-right: .25em; }
+    .controls { 
+      display: flex; 
+      gap: .5rem; 
+      align-items: center; 
+      margin-bottom: 1rem; 
+    }
+    .info { 
+      display: flex; 
+      flex-direction: column;
+      gap: .5rem;
+      flex: 1;
+      min-width: 0;
+    }
+    .info span { 
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .info .title { 
+      font-weight: bold; 
+      color: #0366d6; 
+      font-size: 1.0em; 
+    }
+    .info .desc { 
+      color: #555; 
+      font-size: 0.9em; 
+    }
+    .info .artist { 
+      color: #333; 
+      font-style: italic; 
+    }
+    .info .duration { 
+      color: #888; 
+      font-family: monospace; 
+    }
+    .buttons img { 
+      width: 16px; 
+      height: 16px; 
+      vertical-align: middle; 
+      margin-right: .25em; 
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      body {
+        margin: 1rem;
+      }
+      .card {
+        flex-direction: column;
+        padding: .75rem;
+      }
+      .info {
+        width: 100%;
+      }
+      .buttons {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: .75rem;
+      }
+      .controls {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      input[type="search"] {
+        max-width: none;
+      }
+    }
   </style>
 </head>
 <body>
