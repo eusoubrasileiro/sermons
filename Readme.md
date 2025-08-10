@@ -11,9 +11,9 @@ Spotify’s show episodes endpoint (GET /v1/shows/{id}/episodes) in practice Spo
 Some shows/API responses reach ~500 and then go empty. 
 This cap isn’t documented beyond the standard paging params, so there’s no API-side trick to fetch episode #501+
 
-### Spotify Search API to backfill the missing ones found on SoundCloud
+##### TODO: Spotify Search API to backfill the missing ones found on SoundCloud
 
-Gotcha—here’s the super-short recipe to use 
+gpt5 the super-short recipe to use 
 
 curl -G "https://api.spotify.com/v1/search" \
   -H "Authorization: Bearer $TOKEN" \
